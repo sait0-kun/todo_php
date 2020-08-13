@@ -13,14 +13,14 @@
 </head>
 <body>
 <header class="header">todoリスト</header>
-<section>
-    <h1>todoリストにログイン</h1>
-    <form action="" method="post">
-        <input type="text" name="user_name" size="30" maxlength="20" placeholder="ユーザー名">
-        <input type="text" name="user_pass" size="30" maxlength="20" placeholder="パスワード">
-        <div>
-            <a href="signUp.php">ユーザー登録</a>
-            <input type="submit" value="ログイン">
+<section class="login">
+    <h1 class="login__title">todoリストにログイン</h1>
+    <form class="login__form" action="" method="post">
+        <input class="login__form__input"  type="text" name="user_name" size="30" maxlength="20" placeholder="ユーザー名">
+        <input class="login__form__input"  type="text" name="user_pass" size="30" maxlength="20" placeholder="パスワード">
+        <div class="login__form__btn">
+            <a class="login__form__btn-left" href="signUp.php">ユーザー登録</a>
+            <input class="login__form__btn-right" type="submit" value="ログイン">
         </div>
     </form>
 </section>

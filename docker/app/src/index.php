@@ -19,7 +19,7 @@
         <input type="text" name="user_name" size="30" maxlength="20" placeholder="ユーザー名">
         <input type="text" name="user_pass" size="30" maxlength="20" placeholder="パスワード">
         <div>
-            <a href="signUp.php">ユーザ登録</a>
+            <a href="signUp.php">ユーザー登録</a>
             <input type="submit" value="ログイン">
         </div>
     </form>

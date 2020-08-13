@@ -14,7 +14,7 @@
 <body>
 <header>todo管理アプリケーション</header>
 <section>
-    <h1>ログインする</h1>
+    <h1>todoリストにログイン</h1>
     <form action="" method="post">
         <input type="text" name="user_name" size="30" maxlength="20">
         <p>* ユーザーネームをご記入ください</p>

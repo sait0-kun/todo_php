@@ -21,7 +21,7 @@
         <input type="text" name="user_pass" size="30" maxlength="20">
         <p>* パスワードをご記入ください</p>
         <div>
-            <a href="signUp.php">新規作成</a>
+            <a href="signUp.php">ユーザ登録</a>
             <input type="submit" value="ログイン">
         </div>
     </form>

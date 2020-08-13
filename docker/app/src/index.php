@@ -16,10 +16,8 @@
 <section>
     <h1>todoリストにログイン</h1>
     <form action="" method="post">
-        <input type="text" name="user_name" size="30" maxlength="20">
-        <p>* ユーザーネームをご記入ください</p>
-        <input type="text" name="user_pass" size="30" maxlength="20">
-        <p>* パスワードをご記入ください</p>
+        <input type="text" name="user_name" size="30" maxlength="20" placeholder="ユーザー名">
+        <input type="text" name="user_pass" size="30" maxlength="20" placeholder="パスワード">
         <div>
             <a href="signUp.php">ユーザ登録</a>
             <input type="submit" value="ログイン">

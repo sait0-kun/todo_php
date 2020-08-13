@@ -4,3 +4,48 @@
   font-size: 30px;
   padding: 10px 20px;
 }
+
+.login {
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.login__title {
+  font-weight: normal;
+}
+
+.login__form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.login__form__input {
+  margin: 10px 0;
+}
+
+.login__form__btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.login__form__btn * {
+  width: 160px;
+  border: #666 solid 1px;
+  border-radius: 5px;
+  color: #111;
+  font-weight: normal;
+  font-size: 16px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.login__form__btn *:hover {
+  opacity: .6;
+}
+
+.login__form__btn-left {
+  display: inline-block;
+  background-color: #f0f0f0;
+}

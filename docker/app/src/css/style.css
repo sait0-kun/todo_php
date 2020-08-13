@@ -3,12 +3,14 @@
   color: #111;
   font-size: 30px;
   padding: 10px 20px;
+  height: 5vh;
 }
 
 .login {
   padding: 20px;
   background-color: #f0f0f0;
   text-align: center;
+  height: 81vh;
 }
 
 .login__title {
@@ -48,4 +50,12 @@
 .login__form__btn-left {
   display: inline-block;
   background-color: #f0f0f0;
+}
+
+.footer {
+  background-color: #999;
+  color: #111;
+  text-align: center;
+  padding: 10px 0;
+  height: 5vh;
 }

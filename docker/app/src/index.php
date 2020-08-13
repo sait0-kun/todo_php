@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>my-todo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -24,6 +25,7 @@
         </div>
     </form>
 </section>
+<footer class="footer">©︎ 2020 saito</footer>
 
 
 </body>

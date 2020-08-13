@@ -1,0 +1,38 @@
+.login {
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  height: 81vh;
+  &__title {
+    font-weight: normal;
+  }
+  &__form {
+    width: 400px;
+    margin: 0 auto;
+    &__input {
+      margin: 10px 0;
+    }
+    &__btn {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      & * {
+        width: 160px;
+        border: #666 solid 1px;
+        border-radius: 5px;
+        color: #111;
+        font-weight: normal;
+        font-size: 16px;
+        padding: 10px 0;
+        cursor: pointer;
+        &:hover {
+          opacity: .6;
+        }
+      }
+      &-left {
+        display: inline-block;
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}

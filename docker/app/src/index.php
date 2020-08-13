@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<header>todo管理アプリケーション</header>
+<header>todoリスト</header>
 <section>
     <h1>todoリストにログイン</h1>
     <form action="" method="post">

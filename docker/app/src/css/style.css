@@ -141,6 +141,46 @@
   opacity: .7;
 }
 
+.add {
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  height: 81vh;
+}
+
+.add__title {
+  font-weight: normal;
+}
+
+.add__form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.add__form__input {
+  margin: 10px 0;
+}
+
+.add__form__btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.add__form__btn-register {
+  display: inline-block;
+  background-color: #f0f0f0;
+  font-size: 16px;
+  width: 100px;
+  border: #666 solid 1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add__form__btn-register:hover {
+  opacity: .6;
+}
+
 .footer {
   background-color: #999;
   color: #111;

@@ -17,9 +17,9 @@
 <section class="main">
     <h1 class="main__title">todo一覧</h1>
     <ul class="main__list">
-        <li class="main__list__task">aaa<a class="main__list__task-edit" href="#">編集</a></li>
-        <li class="main__list__task">aaa<a class="main__list__task-edit" href="#">編集</a></li>
-        <li class="main__list__task">aaa<a class="main__list__task-edit" href="#">編集</a></li>
+        <li class="main__list__task"><pre class="main__list__task-text">aaa</pre><a class="main__list__task-edit" href="#">編集</a></li>
+        <li class="main__list__task"><pre class="main__list__task-text">aaa</pre><a class="main__list__task-edit" href="#">編集</a></li>
+        <li class="main__list__task"><pre class="main__list__task-text">aaa</pre><a class="main__list__task-edit" href="#">編集</a></li>
     </ul>
 </section>
 <footer class="footer">©︎ 2020 saito</footer>

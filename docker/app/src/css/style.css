@@ -52,6 +52,95 @@
   background-color: #f0f0f0;
 }
 
+.create {
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  height: 81vh;
+}
+
+.create__title {
+  font-weight: normal;
+}
+
+.create__form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.create__form__input {
+  margin: 10px 0;
+}
+
+.create__form__btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.create__form__btn * {
+  width: 160px;
+  border: #666 solid 1px;
+  border-radius: 5px;
+  color: #111;
+  font-weight: normal;
+  font-size: 16px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.create__form__btn *:hover {
+  opacity: .6;
+}
+
+.create__form__btn-register {
+  display: inline-block;
+  background-color: #f0f0f0;
+}
+
+.main {
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  height: 81vh;
+}
+
+.main__title {
+  font-weight: normal;
+}
+
+.main__list {
+  margin: 0 auto;
+  padding: 0;
+  width: 60%;
+  font-size: 1.8rem;
+}
+
+.main__list__task {
+  width: 100%;
+  margin: 0;
+  border-bottom: #333 solid 1px;
+  display: flex;
+}
+
+.main__list__task-text {
+  border-left: #333 solid 10px;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.main__list__task-edit {
+  margin: 0 0 0 auto;
+  padding: 0 10px;
+  background-color: #999;
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.main__list__task-edit:hover {
+  opacity: .7;
+}
+
 .footer {
   background-color: #999;
   color: #111;

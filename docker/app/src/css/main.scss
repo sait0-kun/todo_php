@@ -1,0 +1,36 @@
+.main {
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  height: 81vh;
+  &__title {
+    font-weight: normal;
+  }
+  &__list {
+    margin: 0 auto;
+    padding: 0;
+    width: 60%;
+    font-size: 1.8rem;
+    &__task {
+      width: 100%;
+      margin: 0;
+      border-bottom: #333 solid 1px;
+      display: flex;
+      &-text {
+        border-left: #333 solid 10px;
+        padding-left: 10px;
+        margin: 0;
+      }
+      &-edit {
+        margin: 0 0 0 auto;
+        padding: 0 10px;
+        background-color: #999;
+        color: #333;
+        font-size: 1.4rem;
+        &:hover {
+          opacity: .7;
+        }
+      }
+    }
+  }
+}

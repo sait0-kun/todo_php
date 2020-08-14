@@ -181,6 +181,46 @@
   opacity: .6;
 }
 
+.update {
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  height: 81vh;
+}
+
+.update__title {
+  font-weight: normal;
+}
+
+.update__form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.update__form__input {
+  margin: 10px 0;
+}
+
+.update__form__btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.update__form__btn-register {
+  display: inline-block;
+  background-color: #f0f0f0;
+  font-size: 16px;
+  width: 100px;
+  border: #666 solid 1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update__form__btn-register:hover {
+  opacity: .6;
+}
+
 .footer {
   background-color: #999;
   color: #111;

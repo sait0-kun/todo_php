@@ -29,7 +29,7 @@
 <section class="create">
     <h1 class="create__title">新規ユーザー登録</h1>
     <form class="create__form" action="" method="post">
-        <input class="create__form__input"  type="text" name="user_name" size="30" maxlength="20" placeholder="ユーザー名">
+        <input class="create__form__input"  type="text" name="user_name" size="30" maxlength="20" placeholder="ユーザー名" value="<?php print(htmlspecialchars($_POST['user_name'], ENT_QUOTES)); ?>">
         <?php if ($error['user_name'] === 'blank'): ?>
         <p>*ユーザー名を入力して下さい。</p>
         <?php endif; ?>

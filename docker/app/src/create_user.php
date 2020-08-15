@@ -12,6 +12,9 @@
         if ($_POST['user_pass'] === '') {
             $error['user_pass'] = 'blank';
         }
+        if ($_POST['user_pass'] !== $_POST['user_pass_re-enter']) {
+            $error['user_pass_re-enter'] = 'difference';
+        }
     }
 
     if (empty($error)) {
@@ -22,6 +25,7 @@
             $error['user_name'] = 'duplicate';
         }
     }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,12 +50,15 @@
         <p>*指定されたユーザー名は既に使用されています。</p>
         <?php endif; ?>
         <input class="create__form__input"  type="password" name="user_pass" size="30" maxlength="20" placeholder="パスワード">
-        <input class="create__form__input"  type="password" name="user_pass" size="30" maxlength="20" placeholder="パスワードを再度入力して下さい">
         <?php if ($error['user_pass'] === 'length'): ?>
         <p>*パスワードは4文字以上を入力して下さい。</p>
         <?php endif; ?>
         <?php if ($error['user_pass'] === 'blank'): ?>
         <p>*パスワードを入力して下さい。</p>
+        <?php endif; ?>
+        <input class="create__form__input"  type="password" name="user_pass_re-enter" size="30" maxlength="20" placeholder="パスワードを再度入力して下さい">
+        <?php if ($error['user_pass_re-enter'] === 'difference'): ?>
+        <p>*再入力のパスワードが違います。</p>
         <?php endif; ?>
         <div class="create__form__btn">
             <input class="create__form__btn-register" type="submit" value="ユーザー登録">

@@ -62,7 +62,7 @@
         <?php endif; ?>
         <!--  -->
         <div class="login__form__btn">
-            <a class="login__form__btn-left" href="signUp.php">ユーザー登録</a>
+            <a class="login__form__btn-left" href="./create_user.php">ユーザー登録</a>
             <input class="login__form__btn-right" type="submit" value="ログイン">
         </div>
     </form>

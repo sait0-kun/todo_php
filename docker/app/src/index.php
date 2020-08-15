@@ -1,6 +1,30 @@
 <?php
     session_start();
     require('dbconnect.php');
+
+    if (!empty($_POST)) {
+        if ($_POST['user_name'] !== '' && $_POST['user_pass'] !== '') {
+            $login = $db->prepare('SELECT * FROM users WHERE user_name=? AND password=?');
+            $login->execute(array(
+                $_POST['user_name'],
+                $_POST['user_pass'],
+                // sha1($_POST['user_pass'])
+            ));
+            $member = $login->fetch();
+
+            if ($member) {
+                $_SESSION['id'] = $member['user_id'];
+                $_SESSION['time'] = time();
+
+                header('Location: main.php');
+                exit();
+            } else {
+                $error['login'] = 'failed';
+            }
+        } else {
+            $error['login'] = 'blank';
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html>

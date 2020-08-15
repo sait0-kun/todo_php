@@ -34,13 +34,25 @@
         }
     }
 
-    if(!empty($_SESSION)) {
+    if(!empty($_SESSION['create'])) {
         // ユーザー登録処理
         $statement = $db->prepare('INSERT INTO users SET user_name=?, password=?');
         $statement->execute(array(
             $_SESSION['create']['user_name'],
             sha1($_SESSION['create']['user_pass'])
         ));
+
+        // ユーザー登録後、DBからuser_id取得してセッションに保存
+        $login = $db->prepare('SELECT * FROM users WHERE user_name=? AND password=?');
+        $login->execute(array(
+            $_SESSION['create']['user_name'],
+            sha1($_SESSION['create']['user_pass'])
+        ));
+        $member = $login->fetch();
+
+        $_SESSION['id'] = $member['user_id'];
+        $_SESSION['time'] = time();
+
         unset($_SESSION['create']);
 
         header('Location: main.php');

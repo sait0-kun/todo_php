@@ -13,6 +13,15 @@
             $error['user_pass'] = 'blank';
         }
     }
+
+    if (empty($error)) {
+        $member = $db->prepare('SELECT COUNT(*) AS cnt FROM users WHERE user_name=?');
+        $member->execute(array($_POST['user_name']));
+        $record = $member->fetch();
+        if ($record['cnt'] > 0) {
+            $error['user_name'] = 'duplicate';
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,6 +41,9 @@
         <input class="create__form__input"  type="text" name="user_name" size="30" maxlength="20" placeholder="ユーザー名" value="<?php print(htmlspecialchars($_POST['user_name'], ENT_QUOTES)); ?>">
         <?php if ($error['user_name'] === 'blank'): ?>
         <p>*ユーザー名を入力して下さい。</p>
+        <?php endif; ?>
+        <?php if ($error['user_name'] === 'duplicate'): ?>
+        <p>*指定されたユーザー名は既に使用されています。</p>
         <?php endif; ?>
         <input class="create__form__input"  type="password" name="user_pass" size="30" maxlength="20" placeholder="パスワード">
         <input class="create__form__input"  type="password" name="user_pass" size="30" maxlength="20" placeholder="パスワードを再度入力して下さい">

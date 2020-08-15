@@ -11,8 +11,8 @@
             $login = $db->prepare('SELECT * FROM users WHERE user_name=? AND password=?');
             $login->execute(array(
                 $_POST['user_name'],
-                $_POST['user_pass'],
-                // sha1($_POST['user_pass'])
+                // $_POST['user_pass'],
+                sha1($_POST['user_pass'])
             ));
             // ユーザー登録済みならDBから取得
             $member = $login->fetch();

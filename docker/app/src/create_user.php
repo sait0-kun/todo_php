@@ -23,7 +23,21 @@
         $record = $member->fetch();
         if ($record['cnt'] > 0) {
             $error['user_name'] = 'duplicate';
+        } else {
+            $_SESSION['create'] = $_POST;
         }
+    }
+
+    if(!empty($_SESSION)) {
+        $statement = $db->prepare('INSERT INTO users SET user_name=?, password=?');
+        $statement->execute(array(
+            $_SESSION['create']['user_name'],
+            sha1($_SESSION['create']['user_pass'])
+        ));
+        unset($_SESSION['create']);
+
+        header('Location: main.php');
+        exit();
     }
 
 ?>

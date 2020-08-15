@@ -15,3 +15,9 @@ PRIMARY KEY (task_id));
 INSERT INTO users VALUES ('1', 'admin_a', SHA1('admin_a'));
 INSERT INTO users VALUES ('2', 'admin_b', SHA1('admin_b'));
 INSERT INTO users VALUES ('3', 'admin_c', SHA1('admin_c'));
+
+INSERT INTO task VALUES ('1', null, 'ra-men', '1');
+INSERT INTO task VALUES ('1', null, 'tukemen', '3');
+INSERT INTO task VALUES ('1', null, 'boku', '2');
+INSERT INTO task VALUES ('1', null, 'ikemen', '3');
+

@@ -40,6 +40,7 @@
                 </a>
             </li>
         <?php endforeach; ?>
+        <li><a class="main__list__task-edit" href="add.php">タスク追加</a></li>
     </ul>
 </section>
 <footer class="footer">©︎ 2020 saito</footer>

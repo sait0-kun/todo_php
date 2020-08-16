@@ -9,7 +9,7 @@
     }
 
     // user_idに基づいてtaskを取得
-    $statement = $db->prepare('SELECT task_name, priority FROM task WHERE user_id ="'. $_SESSION['id'] .'"');
+    $statement = $db->prepare('SELECT task_id, task_name, priority FROM task WHERE user_id ="'. $_SESSION['id'] .'"');
     $statement->execute();
     $task = $statement->fetchAll();
 ?>
@@ -31,7 +31,7 @@
         <?php foreach ($task as $value): ?>
             <li class="main__list__task">
                 <pre class="main__list__task-text"><?php print(htmlspecialchars($value['task_name'], ENT_QUOTES)); ?></pre>
-                <a class="main__list__task-edit" href="update.php">編集</a>
+                <a class="main__list__task-edit" href="update.php?id=<?php print(htmlspecialchars($value['task_id'], ENT_QUOTES)); ?>">編集</a>
             </li>
         <?php endforeach; ?>
     </ul>

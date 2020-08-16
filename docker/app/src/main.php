@@ -29,7 +29,10 @@
     <h1 class="main__title">todo一覧</h1>
     <ul class="main__list">
         <?php foreach ($task as $value): ?>
-            <li class="main__list__task"><pre class="main__list__task-text"><?php print(htmlspecialchars($value['task_name'], ENT_QUOTES)); ?></pre><a class="main__list__task-edit" href="update.php">編集</a></li>
+            <li class="main__list__task">
+                <pre class="main__list__task-text"><?php print(htmlspecialchars($value['task_name'], ENT_QUOTES)); ?></pre>
+                <a class="main__list__task-edit" href="update.php">編集</a>
+            </li>
         <?php endforeach; ?>
     </ul>
 </section>

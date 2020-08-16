@@ -30,8 +30,14 @@
     <ul class="main__list">
         <?php foreach ($task as $value): ?>
             <li class="main__list__task">
-                <pre class="main__list__task-text"><?php print(htmlspecialchars($value['task_name'], ENT_QUOTES)); ?></pre>
-                <a class="main__list__task-edit" href="update.php?id=<?php print(htmlspecialchars($value['task_id'], ENT_QUOTES)); ?>">編集</a>
+                <p class="main__list__task-text">
+                <?php print(htmlspecialchars($value['task_name'], ENT_QUOTES)); ?>
+                </p>
+                <a
+                class="main__list__task-edit"
+                href="update.php?id=<?php print(htmlspecialchars($value['task_id'], ENT_QUOTES)); ?>">
+                編集
+                </a>
             </li>
         <?php endforeach; ?>
     </ul>

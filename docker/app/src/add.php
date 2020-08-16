@@ -8,7 +8,18 @@
         exit();
     }
 
-    
+    // タスク追加処理
+    if (!empty($_POST['add'])) {
+        $statement = $db->prepare('INSERT INTO task SET user_id=?, task_name=?, priority=?');
+        $statement->execute(array(
+            $_SESSION['id'],
+            $_POST['add'],
+            $_POST['priority']
+        ));
+
+        header('Location: main.php');
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html>

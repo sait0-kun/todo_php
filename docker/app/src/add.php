@@ -37,6 +37,9 @@
     <h1 class="add__title">タスク作成</h1>
     <form class="add__form" action="" method="post">
         <input class="add__form__input"  type="text" name="add" size="30" maxlength="40" placeholder="タスク名">
+        <label></label><input type="radio" name="priority" value='1'>高</label>
+        <label></label><input type="radio" name="priority" value='2'>中</label>
+        <label></label><input type="radio" name="priority" value='3'>低</label>
         <div class="add__form__btn">
             <input class="add__form__btn-register" type="submit" value="作成">
         </div>

@@ -38,6 +38,11 @@
                 href="update.php?id=<?php print(htmlspecialchars($value['task_id'], ENT_QUOTES)); ?>">
                 編集
                 </a>
+                <a
+                class="main__list__task-edit"
+                href="delete.php?id=<?php print(htmlspecialchars($value['task_id'], ENT_QUOTES)); ?>">
+                削除
+                </a>
             </li>
         <?php endforeach; ?>
         <li><a class="main__list__task-edit" href="add.php">タスク追加</a></li>

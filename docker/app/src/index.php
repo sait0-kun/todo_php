@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<header class="header">todoリスト</header>
+<?php include('./components/header.php') ?>
 <section class="login">
     <h1 class="login__title">todoリストにログイン</h1>
     <form class="login__form" action="" method="post">

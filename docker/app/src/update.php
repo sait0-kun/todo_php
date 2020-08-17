@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<header class="header">todoリスト</header>
+<?php include('./components/header.php') ?>
 <section class="update">
     <h1 class="update__title">タスク編集</h1>
     <form class="update__form" action="" method="post">

@@ -72,7 +72,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<header class="header">todoリスト</header>
+<?php include('./components/header.php') ?>
 <section class="create">
     <h1 class="create__title">新規ユーザー登録</h1>
     <form class="create__form" action="" method="post">

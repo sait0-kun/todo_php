@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<header class="header">todoリスト</header>
+<?php include('./components/header.php') ?>
 <section class="main">
     <p>ようこそ<?php print(htmlspecialchars($_SESSION['name'])); ?>さん</p>
     <h1 class="main__title">todo一覧</h1>

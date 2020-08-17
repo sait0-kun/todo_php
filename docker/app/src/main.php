@@ -41,6 +41,7 @@
 <body>
 <header class="header">todoリスト</header>
 <section class="main">
+    <p>ようこそ<?php print(htmlspecialchars($_SESSION['name'])); ?>さん</p>
     <h1 class="main__title">todo一覧</h1>
     <ul class="main__list">
         <?php foreach ($task as $value): ?>

@@ -20,6 +20,7 @@
             if ($member) {
                 // ログイン時にセッションに保存
                 $_SESSION['id'] = $member['user_id'];
+                $_SESSION['name'] = $member['user_name'];
                 $_SESSION['time'] = time();
 
                 header('Location: main.php');

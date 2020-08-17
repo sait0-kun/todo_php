@@ -16,13 +16,17 @@
         $page = 1;
     }
     $start = ($page - 1) * 5;
-
     // user_idに基づいてtaskを取得
     $statement = $db->prepare('SELECT task_id, task_name, priority FROM task WHERE user_id ="'. $_SESSION['id'] .'" ORDER BY task_id LIMIT ?, 5');
     // $statement->execute();
     $statement->bindParam(1, $start, PDO::PARAM_INT);
     $statement->execute();
     $task = $statement->fetchAll();
+
+    // ページネーションの最後のページを取得
+    $counts = $db->query('SELECT COUNT(*) as cnt FROM task WHERE user_id ="'. $_SESSION['id'] .'"');
+    $count = $counts->fetch();
+    $max_page = ceil($count['cnt'] / 5);
 ?>
 <!DOCTYPE html>
 <html>
@@ -57,7 +61,14 @@
             </li>
         <?php endforeach; ?>
         <li><a class="main__list__task-edit" href="add.php">タスク追加</a></li>
+
+        <?php if ($page >= 2): ?>
+        <a href="main.php?page=<?php print($page-1); ?>"><?php print($page-1); ?>ページ目へ</a>
+        <?php endif; ?>
+        |
+        <?php if ($page < $max_page): ?>
         <a href="main.php?page=<?php print($page+1); ?>"><?php print($page+1); ?>ページ目へ</a>
+        <?php endif; ?>
     </ul>
 </section>
 <footer class="footer">©︎ 2020 saito</footer>

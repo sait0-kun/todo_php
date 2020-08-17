@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require('dbconnect.php');
+    require('./modules/dbconnect.php');
 
     if (!empty($_POST)) {
         // ログイン失敗時のユーザー名formに表示するため

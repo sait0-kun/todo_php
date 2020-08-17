@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require('dbconnect.php');
+    require('./modules/dbconnect.php');
 
     if (!empty($_POST)) {
         // ユーザー名が空白の場合
@@ -51,6 +51,7 @@
         $member = $login->fetch();
 
         $_SESSION['id'] = $member['user_id'];
+        $_SESSION['name'] = $member['user_name'];
         $_SESSION['time'] = time();
 
         unset($_SESSION['create']);

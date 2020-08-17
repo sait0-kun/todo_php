@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require('dbconnect.php');
+    require('./modules/dbconnect.php');
 
     // ログインorユーザー登録してなかったらログイン画面に戻す処理
     if (!isset($_SESSION['id'])) {

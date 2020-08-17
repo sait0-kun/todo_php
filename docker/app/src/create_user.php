@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require('dbconnect.php');
+    require('./modules/dbconnect.php');
 
     if (!empty($_POST)) {
         // ユーザー名が空白の場合
@@ -51,6 +51,7 @@
         $member = $login->fetch();
 
         $_SESSION['id'] = $member['user_id'];
+        $_SESSION['name'] = $member['user_name'];
         $_SESSION['time'] = time();
 
         unset($_SESSION['create']);
@@ -71,7 +72,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<header class="header">todoリスト</header>
+<?php include('./components/header.php') ?>
 <section class="create">
     <h1 class="create__title">新規ユーザー登録</h1>
     <form class="create__form" action="" method="post">

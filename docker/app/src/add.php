@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require('dbconnect.php');
+    require('./modules/dbconnect.php');
 
     // ログインorユーザー登録してなかったらログイン画面に戻す処理
     if (!isset($_SESSION['id'])) {
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<header class="header">todoリスト</header>
+<?php include('./components/header.php') ?>
 <section class="add">
     <h1 class="add__title">タスク作成</h1>
     <form class="add__form" action="" method="post">

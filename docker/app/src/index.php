@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require('dbconnect.php');
+    require('./modules/dbconnect.php');
 
     if (!empty($_POST)) {
         // ログイン失敗時のユーザー名formに表示するため
@@ -20,6 +20,7 @@
             if ($member) {
                 // ログイン時にセッションに保存
                 $_SESSION['id'] = $member['user_id'];
+                $_SESSION['name'] = $member['user_name'];
                 $_SESSION['time'] = time();
 
                 header('Location: main.php');
@@ -45,7 +46,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<header class="header">todoリスト</header>
+<?php include('./components/header.php') ?>
 <section class="login">
     <h1 class="login__title">todoリストにログイン</h1>
     <form class="login__form" action="" method="post">

@@ -10,11 +10,10 @@
 
     // タスク追加処理
     if (!empty($_POST['add'])) {
-        $statement = $db->prepare('INSERT INTO task SET user_id=?, task_name=?, priority=?');
+        $statement = $db->prepare('INSERT INTO task SET user_id=?, task_name=?');
         $statement->execute(array(
             $_SESSION['id'],
-            $_POST['add'],
-            $_POST['priority']
+            $_POST['add']
         ));
 
         header('Location: main.php');
@@ -37,9 +36,6 @@
     <h1 class="add__title">タスク作成</h1>
     <form class="add__form" action="" method="post">
         <input class="add__form__input"  type="text" name="add" size="30" maxlength="40" placeholder="タスク名">
-        <label></label><input type="radio" name="priority" value='1'>高</label>
-        <label></label><input type="radio" name="priority" value='2'>中</label>
-        <label></label><input type="radio" name="priority" value='3'>低</label>
         <div class="add__form__btn">
             <input class="add__form__btn-register" type="submit" value="作成">
         </div>

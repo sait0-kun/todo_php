@@ -17,8 +17,7 @@
     }
     $start = ($page - 1) * 5;
     // user_idに基づいてtaskを取得
-    $statement = $db->prepare('SELECT task_id, task_name, priority FROM task WHERE user_id ="'. $_SESSION['id'] .'" ORDER BY task_id LIMIT ?, 5');
-    // $statement->execute();
+    $statement = $db->prepare('SELECT task_id, task_name FROM task WHERE user_id ="'. $_SESSION['id'] .'" ORDER BY task_id LIMIT ?, 5');
     $statement->bindParam(1, $start, PDO::PARAM_INT);
     $statement->execute();
     $task = $statement->fetchAll();

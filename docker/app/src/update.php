@@ -2,29 +2,8 @@
     session_start();
     require('./modules/dbconnect.php');
     require('./modules/checkLogin.php');
-
-    // タスク名の取得処理
-    if (isset($_GET['id'])) {
-        $statement = $db->prepare('SELECT task_name FROM task WHERE task_id ="'. $_GET['id'] .'" AND user_id = "'. $_SESSION['id'] .'"');
-        $statement->execute();
-        $task = $statement->fetch();
-
-        // 別ユーザのタスクにアクセスしたらmain.phpに戻す
-        if (empty($task)) {
-            header('Location: main.php');
-        }
-    } else {
-        header('Location: main.php');
-    }
-
-    // 編集処理
-    if (!empty($_POST['add'])) {
-        $statement = $db->prepare('UPDATE task SET task_name = "'. $_POST['add'] . '" WHERE task_id = "'. $_GET['id'] .'"');
-        $statement->execute();
-
-        header('Location: main.php');
-        exit();
-    }
+    require('./modules/getTask.php');
+    require('./modules/updateTask.php');
 ?>
 <!DOCTYPE html>
 <html>

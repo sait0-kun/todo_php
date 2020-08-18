@@ -1,12 +1,7 @@
 <?php
     session_start();
     require('./modules/dbconnect.php');
-
-    // ログインorユーザー登録してなかったらログイン画面に戻す処理
-    if (!isset($_SESSION['id'])) {
-        header('Location: index.php');
-        exit();
-    }
+    require('./modules/checkLogin.php');
 
     // タスク名の取得処理
     if (isset($_GET['id'])) {

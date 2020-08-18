@@ -1,24 +1,8 @@
 <?php
     session_start();
     require('./modules/dbconnect.php');
-
-    // ログインorユーザー登録してなかったらログイン画面に戻す処理
-    if (!isset($_SESSION['id'])) {
-        header('Location: index.php');
-        exit();
-    }
-
-    // タスク追加処理
-    if (!empty($_POST['add'])) {
-        $statement = $db->prepare('INSERT INTO task SET user_id=?, task_name=?');
-        $statement->execute(array(
-            $_SESSION['id'],
-            $_POST['add']
-        ));
-
-        header('Location: main.php');
-        exit();
-    }
+    require('./modules/checkLogin.php');
+    require('./modules/addTask.php');
 ?>
 <!DOCTYPE html>
 <html>

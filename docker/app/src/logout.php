@@ -2,14 +2,7 @@
     session_start();
     require('./modules/dbconnect.php');
     require('./modules/checkLogin.php');
-
-    if (isset($_POST['user_id'])) {
-        unset($_SESSION['id']);
-        unset($_SESSION['name']);
-        unset($_SESSION['time']);
-
-        header('Location: index.php');
-    }
+    require('./modules/userLogout.php');
 ?>
 <!DOCTYPE html>
 <html>

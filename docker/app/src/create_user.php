@@ -73,8 +73,8 @@
 </head>
 <body>
 <?php include('./components/header.php') ?>
-<section class="create">
-    <h1 class="create__title">新規ユーザー登録</h1>
+<section class="common">
+    <h1 class="common__title">新規ユーザー登録</h1>
     <form class="create__form" action="" method="post">
         <input class="create__form__input"  type="text" name="user_name" size="30" maxlength="20" placeholder="ユーザー名" value="<?php print(htmlspecialchars($_POST['user_name'], ENT_QUOTES)); ?>">
         <?php if ($error['user_name'] === 'blank'): ?>
@@ -94,8 +94,8 @@
         <?php if ($error['user_pass_re-enter'] === 'difference'): ?>
         <p>*再入力のパスワードが違います。</p>
         <?php endif; ?>
-        <div class="create__form__btn">
-            <input class="create__form__btn-register" type="submit" value="ユーザー登録">
+        <div class="common__btn">
+            <input class="common__btn-register" type="submit" value="ユーザー登録">
         </div>
     </form>
 </section>

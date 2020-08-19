@@ -1,0 +1,35 @@
+.common {
+  padding: 20px;
+  background-color: #D9D9D9;
+  text-align: center;
+  height: 81vh;
+  &__title {
+    font-weight: normal;
+    color: #466C8C;
+  }
+}
+.common__btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  & * {
+    width: 160px;
+    border: #666 solid 1px;
+    border-radius: 5px;
+    color: #BFC7D9;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 10px 0;
+    background-color: #A69485;
+    cursor: pointer;
+    &:hover {
+      opacity: .6;
+    }
+  }
+  &__left {
+    display: inline-block;
+  }
+  &__right {
+    display: inline-block;
+  }
+}

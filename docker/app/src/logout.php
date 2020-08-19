@@ -36,8 +36,7 @@
         <input type="submit" value="ログアウト">
     </form>
 </section>
-<footer class="footer">©︎ 2020 saito</footer>
-
+<?php include('./components/footer.php') ?>
 
 </body>
 </html>

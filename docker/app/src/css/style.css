@@ -79,76 +79,98 @@
   margin: 10px 0;
 }
 
-.create__btn {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.create__btn * {
-  width: 160px;
-  border: #666 solid 1px;
-  border-radius: 5px;
-  color: #111;
-  font-weight: normal;
-  font-size: 16px;
-  padding: 10px 0;
-  cursor: pointer;
-}
-
-.create__btn *:hover {
-  opacity: .6;
-}
-
-.create__btn-register {
-  display: inline-block;
-  background-color: #f0f0f0;
-}
-
 .main {
-  padding: 20px;
-  background-color: #f0f0f0;
-  text-align: center;
-  height: 81vh;
-}
-
-.main__title {
-  font-weight: normal;
-}
-
-.main__list {
   margin: 0 auto;
   padding: 0;
   width: 60%;
   font-size: 1.8rem;
 }
 
-.main__list__task {
+.main__link {
+  color: #466C8C;
+  font-size: 1.4rem;
+}
+
+.main__list {
   width: 100%;
   margin: 0;
-  border-bottom: #333 solid 1px;
+  color: #466C8C;
+  border-bottom: #A69485 solid 1px;
   display: flex;
 }
 
-.main__list__task-text {
-  border-left: #333 solid 10px;
+.main__list__task {
+  border-left: #A69485 solid 10px;
   padding-left: 10px;
   margin: 0;
 }
 
-.main__list__task-edit {
+.main__list__edit {
+  margin: 0 0 0 auto;
   padding: 0 10px;
-  background-color: #999;
-  color: #333;
+  background-color: #BFC7D9;
+  color: #466C8C;
   font-size: 1.4rem;
 }
 
-.main__list__task-edit:first-of-type {
-  margin: 0 0 0 auto;
+.main__list__edit:hover {
+  opacity: .7;
 }
 
-.main__list__task-edit:hover {
+.main__list__delete {
+  padding: 0 10px;
+  background-color: #BFC7D9;
+  color: #466C8C;
+  font-size: 1.4rem;
+}
+
+.main__list__delete:hover {
   opacity: .7;
+}
+
+.main__list__add {
+  padding: 0 10px;
+  background-color: #BFC7D9;
+  color: #466C8C;
+  font-size: 1.4rem;
+}
+
+.main__list__add:hover {
+  opacity: .7;
+}
+
+@media screen and (max-width: 959px) {
+  .main {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+  .main__list__edit {
+    font-size: 1rem;
+  }
+  .main__list__delete {
+    font-size: 1rem;
+  }
+  .main__list__add {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    font-size: 0.4rem;
+  }
+  .main__link {
+    font-size: 0.6rem;
+  }
+  .main__list__edit {
+    font-size: 0.6rem;
+  }
+  .main__list__delete {
+    font-size: 0.6rem;
+  }
+  .main__list__add {
+    font-size: 0.6rem;
+  }
 }
 
 .add {

@@ -45,9 +45,9 @@
 <?php include('./components/header.php') ?>
 <section class="common">
     <h1 class="common__title">タスク編集</h1>
-    <form class="update__form" action="" method="post">
+    <form class="update" action="" method="post">
         <input
-        class="update__form__input"
+        class="update__form"
         type="text" name="add" size="30" maxlength="40"
         value="<?php print(htmlspecialchars($task['task_name'], ENT_QUOTES)); ?>"
         >

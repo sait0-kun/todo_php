@@ -45,9 +45,9 @@
 <?php include('./components/header.php') ?>
 <section class="common">
     <h1 class="common__title">タスク削除</h1>
-    <form class="update__form" action="" method="post">
+    <form class="delete" action="" method="post">
         <input
-        class="update__form__input"
+        class="delete__form"
         type="text" name="delete" size="30" maxlength="40" readonly
         value="<?php print(htmlspecialchars($task['task_name'], ENT_QUOTES)); ?>"
         >

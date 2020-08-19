@@ -4,7 +4,9 @@
   width: 60%;
   font-size: 1.8rem;
   &__link {
+    display: inline-block;
     color: #466C8C;
+    margin: 20px 0 0 0;
     font-size: 1.4rem;
   }
   &__list {
@@ -38,10 +40,12 @@
       }
     }
     &__add {
+      display: inline-block;
       padding: 0 10px;
       background-color: #BFC7D9;
       color: #466C8C;
       font-size: 1.4rem;
+      margin: 20px 0 0 0;
       &:hover {
         opacity: .7;
       }

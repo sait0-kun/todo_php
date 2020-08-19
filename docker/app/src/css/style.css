@@ -110,6 +110,12 @@
   margin: 10px 0;
 }
 
+@media screen and (max-width: 959px) {
+  .create {
+    width: 300px;
+  }
+}
+
 .main {
   margin: 0 auto;
   padding: 0;
@@ -213,6 +219,12 @@
   margin: 10px 0;
 }
 
+@media screen and (max-width: 959px) {
+  .add {
+    width: 300px;
+  }
+}
+
 .update {
   width: 400px;
   margin: 0 auto;
@@ -220,6 +232,12 @@
 
 .update__form {
   margin: 10px 0;
+}
+
+@media screen and (max-width: 959px) {
+  .update {
+    width: 300px;
+  }
 }
 
 .footer {

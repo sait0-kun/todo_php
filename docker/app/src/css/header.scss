@@ -16,3 +16,23 @@
     font-size: 1.6rem;
   }
 }
+@media screen and(max-width: 959px) {
+  .header {
+    &__left {
+      font-size: 1.4rem;
+    }
+    &__right {
+      font-size: 1.4rem;
+    }
+  }
+}
+@media screen and(max-width: 480px) {
+  .header {
+    &__left {
+      font-size: 1rem;
+    }
+    &__right {
+      font-size: 1rem;
+    }
+  }
+}

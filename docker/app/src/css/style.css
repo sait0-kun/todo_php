@@ -61,6 +61,24 @@
   font-size: 1.6rem;
 }
 
+@media screen and (max-width: 959px) {
+  .header__left {
+    font-size: 1.4rem;
+  }
+  .header__right {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__left {
+    font-size: 1rem;
+  }
+  .header__right {
+    font-size: 1rem;
+  }
+}
+
 .login {
   width: 400px;
   margin: 0 auto;

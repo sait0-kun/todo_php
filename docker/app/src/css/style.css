@@ -71,32 +71,21 @@
 }
 
 .create {
-  padding: 20px;
-  background-color: #f0f0f0;
-  text-align: center;
-  height: 81vh;
-}
-
-.create__title {
-  font-weight: normal;
-}
-
-.create__form {
   width: 400px;
   margin: 0 auto;
 }
 
-.create__form__input {
+.create__form {
   margin: 10px 0;
 }
 
-.create__form__btn {
+.create__btn {
   margin-top: 20px;
   display: flex;
   justify-content: space-evenly;
 }
 
-.create__form__btn * {
+.create__btn * {
   width: 160px;
   border: #666 solid 1px;
   border-radius: 5px;
@@ -107,11 +96,11 @@
   cursor: pointer;
 }
 
-.create__form__btn *:hover {
+.create__btn *:hover {
   opacity: .6;
 }
 
-.create__form__btn-register {
+.create__btn-register {
   display: inline-block;
   background-color: #f0f0f0;
 }

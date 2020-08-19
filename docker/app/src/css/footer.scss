@@ -1,7 +1,18 @@
 .footer {
-  background-color: #999;
-  color: #111;
-  text-align: center;
+  background-color: #A69485;
+  color: #BFC7D9;
   padding: 10px 0;
   height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+@media screen and(max-width: 959px) {
+
+}
+@media screen and(max-width: 480px) {
+  .footer {
+    font-size: 1rem;
+  }
 }

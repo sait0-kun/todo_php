@@ -17,20 +17,20 @@
 </head>
 <body>
 <?php include('./components/header.php') ?>
-<section class="update">
-    <h1 class="update__title">タスク削除</h1>
-    <form class="update__form" action="" method="post">
+<section class="common">
+    <h1 class="common__title">タスク削除</h1>
+    <form class="delete" action="" method="post">
         <input
-        class="update__form__input"
+        class="delete__form"
         type="text" name="delete" size="30" maxlength="40" readonly
         value="<?php print(htmlspecialchars($task['task_name'], ENT_QUOTES)); ?>"
         >
-        <div class="update__form__btn">
-            <input class="update__form__btn-register" type="submit" value="削除">
+        <div class="common__btn">
+            <input class="common__btn-register" type="submit" value="削除">
         </div>
     </form>
 </section>
-<footer class="footer">©︎ 2020 saito</footer>
+<?php include('./components/footer.php') ?>
 
 
 </body>

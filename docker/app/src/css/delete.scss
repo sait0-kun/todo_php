@@ -1,4 +1,4 @@
-.login {
+.delete {
   width: 400px;
   margin: 0 auto;
   &__form {
@@ -6,9 +6,7 @@
   }
 }
 @media screen and(max-width: 959px) {
-  .login {
-    width: 300px;
-  }
+
 }
 @media screen and(max-width: 480px) {
 

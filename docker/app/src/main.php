@@ -16,39 +16,39 @@
 </head>
 <body>
 <?php include('./components/header.php') ?>
-<section class="main">
+<section class="common">
     <p>ようこそ<?php print(htmlspecialchars($_SESSION['name'])); ?>さん</p>
-    <h1 class="main__title">todo一覧</h1>
-    <ul class="main__list">
+    <h1 class="common__title">todo一覧</h1>
+    <ul class="main">
         <?php foreach ($task as $value): ?>
-            <li class="main__list__task">
-                <p class="main__list__task-text">
+            <li class="main__list">
+                <p class="main__list__task">
                 <?php print(htmlspecialchars($value['task_name'], ENT_QUOTES)); ?>
                 </p>
                 <a
-                class="main__list__task-edit"
+                class="main__list__edit"
                 href="update.php?id=<?php print(htmlspecialchars($value['task_id'], ENT_QUOTES)); ?>">
                 編集
                 </a>
                 <a
-                class="main__list__task-edit"
+                class="main__list__delete"
                 href="delete.php?id=<?php print(htmlspecialchars($value['task_id'], ENT_QUOTES)); ?>">
                 削除
                 </a>
             </li>
         <?php endforeach; ?>
-        <li><a class="main__list__task-edit" href="add.php">タスク追加</a></li>
+        <li><a class="main__list__add" href="add.php">タスク追加</a></li>
 
         <?php if ($page >= 2): ?>
-        <a href="main.php?page=<?php print($page-1); ?>"><?php print($page-1); ?>ページ目へ</a>
+        <a class="main__link" href="main.php?page=<?php print($page-1); ?>"><?php print($page-1); ?>ページ目へ</a>
         <?php endif; ?>
         |
         <?php if ($page < $max_page): ?>
-        <a href="main.php?page=<?php print($page+1); ?>"><?php print($page+1); ?>ページ目へ</a>
+        <a class="main__link" href="main.php?page=<?php print($page+1); ?>"><?php print($page+1); ?>ページ目へ</a>
         <?php endif; ?>
     </ul>
 </section>
-<footer class="footer">©︎ 2020 saito</footer>
+<?php include('./components/footer.php') ?>
 
 
 </body>

@@ -16,16 +16,16 @@
 </head>
 <body>
 <?php include('./components/header.php') ?>
-<section class="add">
-    <h1 class="add__title">タスク作成</h1>
-    <form class="add__form" action="" method="post">
-        <input class="add__form__input"  type="text" name="add" size="30" maxlength="40" placeholder="タスク名">
-        <div class="add__form__btn">
-            <input class="add__form__btn-register" type="submit" value="作成">
+<section class="common">
+    <h1 class="common__title">タスク作成</h1>
+    <form class="add" action="" method="post">
+        <input class="add__form"  type="text" name="add" size="30" maxlength="40" placeholder="タスク名">
+        <div class="common__btn">
+            <input class="common__btn-register" type="submit" value="作成">
         </div>
     </form>
 </section>
-<footer class="footer">©︎ 2020 saito</footer>
+<?php include('./components/footer.php') ?>
 
 
 </body>

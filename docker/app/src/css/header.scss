@@ -1,7 +1,38 @@
 .header {
-  background-color: #999;
-  color: #111;
+  background-color: #A69485;
   font-size: 30px;
   padding: 10px 20px;
   height: 5vh;
+  display: flex;
+  align-items: center;
+  &__left {
+    color: #BFC7D9;
+    margin: 0 auto 0 0;
+    font-size: 1.6rem;
+  }
+  &__right {
+    color: #BFC7D9;
+    margin: 0 0 0 auto;
+    font-size: 1.6rem;
+  }
+}
+@media screen and(max-width: 959px) {
+  .header {
+    &__left {
+      font-size: 1.4rem;
+    }
+    &__right {
+      font-size: 1.4rem;
+    }
+  }
+}
+@media screen and(max-width: 480px) {
+  .header {
+    &__left {
+      font-size: 1rem;
+    }
+    &__right {
+      font-size: 1rem;
+    }
+  }
 }

@@ -16,16 +16,15 @@
 </head>
 <body>
 <?php include('./components/header.php') ?>
-<section class="main">
+<section class="common">
     <p>Hello!!  <?php print(htmlspecialchars($_SESSION['name'])); ?>さん</p>
-    <h1 class="main__title">ログアウトしますか？</h1>
-    <form action="" method="post">
+    <h1 class="common__title">ログアウトしますか？</h1>
+    <form class="common__btn" action="" method="post">
         <input type="hidden" name="user_id" value="<?php print(htmlspecialchars($_SESSION['id'])); ?>">
-        <input type="submit" value="ログアウト">
+        <input class="common__btn-register" type="submit" value="ログアウト">
     </form>
 </section>
-<footer class="footer">©︎ 2020 saito</footer>
-
+<?php include('./components/footer.php') ?>
 
 </body>
 </html>

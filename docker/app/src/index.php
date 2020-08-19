@@ -47,28 +47,28 @@
 </head>
 <body>
 <?php include('./components/header.php') ?>
-<section class="login">
-    <h1 class="login__title">todoリストにログイン</h1>
-    <form class="login__form" action="" method="post">
-        <input class="login__form__input"  type="text" name="user_name" size="30" maxlength="20" placeholder="ユーザー名" value="<?php echo htmlspecialchars($user_name); ?>">
+<section class="common">
+    <h1 class="common__title">todoリストにログイン</h1>
+    <form class="login" action="" method="post">
+        <input class="login__form"  type="text" name="user_name" size="30" maxlength="20" placeholder="ユーザー名" value="<?php echo htmlspecialchars($user_name); ?>">
         <!-- ログイン失敗時 -->
         <?php if ($error['login'] === 'blank'): ?>
         <p>*ユーザー名とパスワードをご記入ください。</p>
         <?php endif; ?>
         <!--  -->
-        <input class="login__form__input"  type="password" name="user_pass" size="30" maxlength="20" placeholder="パスワード">
+        <input class="login__form"  type="password" name="user_pass" size="30" maxlength="20" placeholder="パスワード">
         <!-- ログイン失敗時 -->
         <?php if ($error['login'] === 'failed'): ?>
         <p>*ログインに失敗しました。正しくご記入ください。</p>
         <?php endif; ?>
         <!--  -->
-        <div class="login__form__btn">
-            <a class="login__form__btn-left" href="./create_user.php">ユーザー登録</a>
-            <input class="login__form__btn-right" type="submit" value="ログイン">
+        <div class="common__btn">
+            <a class="common__btn__left" href="./create_user.php">ユーザー登録</a>
+            <input class="common__btn__right" type="submit" value="ログイン">
         </div>
     </form>
 </section>
-<footer class="footer">©︎ 2020 saito</footer>
+<?php include('./components/footer.php') ?>
 
 
 </body>

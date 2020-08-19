@@ -1,38 +1,100 @@
 .main {
-  padding: 20px;
-  background-color: #f0f0f0;
-  text-align: center;
-  height: 81vh;
-  &__title {
-    font-weight: normal;
+  margin: 0 auto;
+  padding: 0;
+  width: 70%;
+  font-size: 1.8rem;
+  &__link {
+    display: inline-block;
+    color: #466C8C;
+    margin: 20px 0 0 0;
+    font-size: 1.4rem;
   }
   &__list {
-    margin: 0 auto;
-    padding: 0;
-    width: 60%;
-    font-size: 1.8rem;
+    width: 100%;
+    margin: 0;
+    color: #466C8C;
+    border-bottom: #A69485 solid 1px;
+    display: flex;
     &__task {
-      width: 100%;
+      border-left: #A69485 solid 10px;
+      padding-left: 10px;
       margin: 0;
-      border-bottom: #333 solid 1px;
-      display: flex;
-      &-text {
-        border-left: #333 solid 10px;
-        padding-left: 10px;
-        margin: 0;
+      overflow: hidden;
+      width: 80%;
+      text-align: left;
+    }
+    &__edit {
+      margin: 0 0 0 auto;
+      padding: 0 10px;
+      background-color: #BFC7D9;
+      color: #466C8C;
+      font-size: 1.3rem;
+      width: 10%;
+      &:hover {
+        opacity: .7;
       }
-      &-edit {
-        // margin: 0 0 0 auto;
-        padding: 0 10px;
-        background-color: #999;
-        color: #333;
-        font-size: 1.4rem;
-        &:first-of-type {
-          margin: 0 0 0 auto;
-        }
-        &:hover {
-          opacity: .7;
-        }
+    }
+    &__delete {
+      padding: 0 10px;
+      background-color: #BFC7D9;
+      color: #466C8C;
+      font-size: 1.3rem;
+      width: 10%;
+      &:hover {
+        opacity: .7;
+      }
+    }
+    &__add {
+      display: inline-block;
+      padding: 0 10px;
+      background-color: #BFC7D9;
+      color: #466C8C;
+      font-size: 1.4rem;
+      margin: 20px 0 0 0;
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 959px) {
+  .main {
+    width: 80%;
+    font-size: 1.2rem;
+    &__list {
+      &__edit {
+        font-size: 1rem;
+      }
+      &__delete {
+        font-size: 1rem;
+      }
+      &__add {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+@media screen and(max-width: 480px) {
+  .main {
+    font-size: 0.4rem;
+    &__link {
+      font-size: 0.6rem;
+    }
+    &__list {
+      &__task {
+        width: 70%;
+      }
+      &__edit {
+        font-size: 0.6rem;
+        width: 15%;
+      }
+      &__delete {
+        font-size: 0.6rem;
+        width: 15%;
+      }
+      &__add {
+        font-size: 0.6rem;
       }
     }
   }
